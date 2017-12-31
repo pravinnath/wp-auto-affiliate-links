@@ -326,10 +326,10 @@ function wpaal_add_affiliate_links($content) {
 							$keys2[] = $name;
 							
 							if($ownhost == $linkhost) {
-								$replace[] = "<a title=\"$title\" class=\"". $lclass ."\" target=\"". $targeto ."\" href=\"$url\">$1</a>";
+								$replace[] = "<a class=\"". $lclass ."\" target=\"". $targeto ."\" href=\"$url\">$1</a>";
 							}
 							else {
-								$replace[] = "<a title=\"$title\" class=\"". $lclass ."\" target=\"". $targeto ."\" ". $relo ." href=\"$url\">$1</a>";
+								$replace[] = "<a class=\"". $lclass ."\" target=\"". $targeto ."\" ". $relo ." href=\"$url\">$1</a>";
 							}
 							$name = preg_quote($name, '/');
 							$regexp[] = str_replace('$name', $name, $reg);	
